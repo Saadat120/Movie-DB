@@ -1,0 +1,283 @@
+:root {
+  --green: #123524;
+  --teal: #018786;
+}
+
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Banner Styling */
+.banner {
+  display: flex;
+  height: 13vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--green);
+  color: #fff;
+  border-bottom: 5px solid var(--green);
+  border-bottom-left-radius: 6%;
+  border-bottom-right-radius: 6%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#Title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+
+
+/*
+Child of searchWrapper
+Styling for searchbars for book titles and authors
+*/
+.search {
+  width: 100%;
+  /*Full Width of searchWrapper */
+  display: flex;
+  /*Display used is flexible */
+  flex-direction: wrap;
+  /*Place all items in searchbar in a row */
+  margin-top: 4.5rem;
+}
+
+/*
+Child of searchbars
+Styling for book title searchbar
+*/
+#titleBar {
+  width: 60%;
+  /*Take full width of searchbar  */
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+
+/*Child of searchbar and Styling for search bar */
+#searchBar {
+  width: 100%;
+  /*Full width of searchbar */
+  height: 3rem;
+  background: 0;
+  color: var(--teal);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--green);
+  font-size: 1rem;
+}
+
+/*child of searchbar Styling for search button at end of search bar */
+#searchSubmit {
+  width: 3.5rem;
+  height: 3rem;
+  margin-left: 2rem;
+  background: var(--green);
+  border: none;
+  border-radius: 20%;
+  outline: none;
+}
+
+#searchSubmit:hover {
+  cursor: pointer;
+}
+
+/*
+section search  
+----------------
+*/
+
+.main {
+  width: 100vw;
+}
+
+
+#content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 2rem;
+  width: 60%;
+  height: 100%;
+  border: 2px solid var(--green);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie Container */
+.movie {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie Header */
+.movie-header h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  color: var(--green);
+}
+
+/* Movie Details */
+.movie-details {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Movie Ratings */
+.movie-ratings ul {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-ratings li {
+  background: #f9f9f9;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Rating Form */
+.movie-submitRate form {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-submitRate input,
+.movie-submitRate textarea {
+  width: 98%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.movie-submitRate button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.movie-submitRate button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal (login screen) styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  height: 40%;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-content input {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  background-color: var(--green);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.modal-footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.modal-footer a {
+  color: var(--green);
+  cursor: pointer;
+}
+
+.modal-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Close Button Styling */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+  /* Slight zoom-in effect */
+}
+
+/* Style the delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--green);
+  /* Trashcan icon color */
+  font-size: 1.2rem;
+  /* Size of the icon */
+  padding: 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.delete-btn:hover {
+  color: var(--green);
+  /* Hover color for trashcan */
+  transform: scale(1.2);
+  /* Slightly enlarge on hover */
+}
+
+.delete-btn:focus {
+  outline: none;
+  /* Remove focus outline */
+}

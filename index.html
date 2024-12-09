@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="connection.js"></script>
+  <title>Movie Web</title>
+</head>
+
+<body>
+  <div class="banner">
+    <h1 id="Title">Movie Search</h1>
+  </div>
+
+  <div class="search">
+    <div id="titleBar">
+      <input id="searchBar" name="searchBar" type="text" placeholder="Search Movie Titles" value="" />
+
+      <button id="searchSubmit" type="button" name="searchSubmit" onclick="retrieve()">
+        <i class="fa fa-search" style="font-size:18px;color:#fff"></i>
+      </button>
+    </div>
+  </div>
+
+  <section class="main">
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal" style="display: none;">
+      <div class="modal-content">
+        <button class="close-btn" onclick="document.getElementById('loginModal').style.display='none'">x</button>
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Enter username" />
+        <input type="password" id="loginPassword" placeholder="Enter password" />
+        <button onclick="login()">Sign In</button>
+        <div class="modal-footer">
+          <p>Don't have an account? <a style="color: blue;" onclick="showRegister()">Create Account</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal" style="display: none;">
+      <div class="modal-content">
+        <button class="close-btn" onclick="document.getElementById('registerModal').style.display='none'">x</button>
+        <h2>Create Account</h2>
+        <input type="text" id="registerUsername" placeholder="Choose a username" />
+        <input type="password" id="registerPassword" placeholder="Choose a password" />
+        <button onclick="register()">Sign Up</button>
+        <div class="modal-footer">
+          <p>Already have an account? <a onclick="showLogin()">Sign In</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="content"></div>
+  </section>
+</body>
+
+</html>
